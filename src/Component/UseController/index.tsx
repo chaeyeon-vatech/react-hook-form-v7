@@ -3,7 +3,6 @@ import {useForm, Controller} from "react-hook-form";
 import {GreyButton} from "./styled";
 import {DefaultComponent, DefaultFormComponent} from "../../styled";
 
-
 // 외부 Controlled component (React-Select, AntD, Material-UI) 와 작업할 때 쓰임.
 import {Input} from "@material-ui/core";
 
@@ -22,6 +21,7 @@ export const UseController = () => {
 
     return (
         <DefaultComponent>
+            <h2>UseController</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <DefaultFormComponent>
                     <label>First Name</label>

@@ -50,7 +50,6 @@ export function UseForm() {
         setValue
     } = useForm(formOptions);
 
-
     // formState
     const {isDirty, dirtyFields, touchedFields, errors} = formState;
 
@@ -66,7 +65,7 @@ export function UseForm() {
 
     return (<>
             <div style={{margin: 20}}>
-                <h2>Render Count:{renderCount}</h2>
+                <h2>UseForm</h2>
                 <h3>FormState 안 Return </h3>
                 <h3>📝 [isDirty] 수정한 기록? : {isDirty ? "Yes" : "No"}</h3>
                 <h3>📝 [dirtyFields] 수정된 기록이 있는 Fields? : {getKeyByValue(dirtyFields).join(", ")}</h3>

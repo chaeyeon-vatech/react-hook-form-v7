@@ -1,7 +1,7 @@
 import * as React from "react";
 import {useForm, useWatch, Control} from "react-hook-form";
 import {DefaultComponent, DefaultFormComponent} from "../../styled";
-import { SubmitButton } from "../UseFormContext/styled";
+import {SubmitButton} from "../UseFormContext/styled";
 import {CustomInput} from "./styled";
 
 interface FormInputs {
@@ -27,6 +27,7 @@ export default function UseWatch() {
 
     return (
         <DefaultComponent>
+            <h2>UseWatch</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <DefaultFormComponent>
                     <label>First Name:</label>
