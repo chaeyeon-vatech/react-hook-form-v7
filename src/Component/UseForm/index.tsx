@@ -39,7 +39,7 @@ export function UseForm() {
     });
     const formOptions = {resolver: yupResolver(validationSchema), defaultValue: {registerSample: ''}};
 
-    // UseForm() hook으로 함수들 가져오기
+    // useForm의 return 값인 methods로 form 데이터를 관리할 수 있다.
     const {
         register,
         getValues,
@@ -47,8 +47,7 @@ export function UseForm() {
         handleSubmit,
         reset,
         formState,
-        setValue,
-        control
+        setValue
     } = useForm(formOptions);
 
 
@@ -66,7 +65,6 @@ export function UseForm() {
     }
 
     return (<>
-
             <div style={{margin: 20}}>
                 <h2>Render Count:{renderCount}</h2>
                 <h3>FormState 안 Return </h3>
@@ -83,7 +81,7 @@ export function UseForm() {
                 width: "90%"
             }}>
                 <h3>React Hook Form Version 7</h3>
-                <div style={{}}>
+                <div>
                     {/* handleSubmit : Form Validation 검사가 성공하면 Form Data를 수신*/}
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div style={{
@@ -125,45 +123,11 @@ export function UseForm() {
 
                                 {/* Reset : 전체 양식 상태, 필드 참조 및 구독을 재설정*/}
                                 <GreyButton type="button"
-                                            onClick={() => reset()}
-                                >Reset
+                                            onClick={() => reset()}>
+                                    Reset
                                 </GreyButton>
                             </div>
                         </div>
-                        {/*<div>*/}
-                        {/*    <div>*/}
-                        {/*        <label>Date of Birth</label>*/}
-                        {/*        <CustomInput type="date" {...register('dob')}*/}
-                        {/*        />*/}
-                        {/*        <ErrorComponent>{errors.dob?.message}</ErrorComponent>*/}
-                        {/*    </div>*/}
-                        {/*    <div>*/}
-                        {/*        <label>Email</label>*/}
-                        {/*        <CustomInput type="text" {...register('email')}*/}
-                        {/*        />*/}
-                        {/*        <ErrorComponent>{errors.email?.message}</ErrorComponent>*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
-                        {/*<div>*/}
-                        {/*    <div>*/}
-                        {/*        <label>Password</label>*/}
-                        {/*        <CustomInput type="password" {...register('password')}*/}
-                        {/*        />*/}
-                        {/*        <ErrorComponent>{errors.password?.message}</ErrorComponent>*/}
-                        {/*    </div>*/}
-                        {/*    <div>*/}
-                        {/*        <label>Confirm Password</label>*/}
-                        {/*        <CustomInput type="password" {...register('confirmPassword')}*/}
-                        {/*        />*/}
-                        {/*        <ErrorComponent>{errors.confirmPassword?.message}</ErrorComponent>*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
-                        {/*<div>*/}
-                        {/*    <CustomInput type="checkbox" {...register('acceptTerms')} id="acceptTerms"*/}
-                        {/*    />*/}
-                        {/*    <label htmlFor="acceptTerms">Accept Terms & Conditions</label>*/}
-                        {/*    <ErrorComponent>{errors.acceptTerms?.message}</ErrorComponent>*/}
-                        {/*</div>*/}
 
                     </form>
                 </div>

@@ -12,54 +12,10 @@ export const RenderCountContainer = styled("div", {
         cursor: "default",
         height: 50,
         outline: "none",
-        // padding: 0,
         fontSize: 20,
         fontColor: "#333333"
-        // alignItems: "flex-end",
-        // bottom: 0,
-        // display: "flex",
-        // fontSize: 14,
-        // justifyContent: "flex-end",
-        // left: 0,
-        // padding: "12px 20px 12px 80px",
-        // position: "absolute",
-        // right: 0,
-        // top: 0,
-
     };
 });
-// export const NavigateContainer = styled("div", {
-//     label: "NavigateContainer"
-// })<{}>(() => {
-//     return {
-//         alignItems: "flex-end",
-//         bottom: 0,
-//         display: "flex",
-//         fontSize: 14,
-//         justifyContent: "flex-end",
-//         left: 0,
-//         padding: "12px 20px 12px 80px",
-//         position: "absolute",
-//         right: 0,
-//         top: 0,
-//
-//     };
-// });
-//
-//
-// export const NavigateLink = styled("a", {
-//     label: "NavigateLink"
-// })<{}>(() => {
-//     return {
-//         float: "left",
-//         color: "#f2f2f2",
-//         textAlign: "center",
-//         padding: "14px 16px",
-//         textDecoration: "none",
-//         fontSize: 17
-//
-//     };
-// });
 
 
 export const ErrorComponent = styled("div", {
@@ -143,29 +99,3 @@ export const FormComponent = styled("div", {
         marginRight: 20
     };
 });
-
-
-export const DefaultComponent = styled("div", {
-    label: "DefaultComponent"
-})<{}>(() => {
-    return {
-        boxSizing: "border-box",
-        borderRadius: 5,
-        backgroundColor: "white",
-        margin: 30,
-        padding: 30,
-        width: "90%"
-    };
-});
-
-export const DefaultFormComponent = styled("div", {
-    label: "DefaultFormComponent"
-})<{}>(() => {
-    return {
-        borderRadius: 50,
-        padding: 80,
-        boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"
-    };
-});
-
-
