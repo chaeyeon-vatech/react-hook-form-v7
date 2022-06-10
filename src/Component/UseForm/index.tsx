@@ -3,16 +3,12 @@ import {useForm} from "react-hook-form";
 import {yupResolver} from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import {
-    ErrorComponent,
+    DefaultComponent, DefaultFormComponent, ErrorComponent,
     CustomInput,
     GreyButton
-} from './styled';
-
-
-let renderCount = 0
+} from '../../styled';
 
 export function UseForm() {
-    renderCount++;
 
     // form validation rules
     const validationSchema = Yup.object().shape({
@@ -55,16 +51,9 @@ export function UseForm() {
                 {/*<h3>📝 [dirtyFields] 수정된 기록이 있는 Fields? : {getKeyByValue(dirtyFields).join(", ")}</h3>*/}
                 {/*<h3>📝 [touchedFields]User InterAction이 있는 Fields? : {getKeyByValue(touchedFields).join(", ")}</h3>*/}
             </div>
-            <div style={{
-                boxSizing: "border-box",
-                borderRadius: 5,
-                backgroundColor: "white",
-                margin: 30,
-                padding: 30,
-                width: "90%"
-            }}>
+            <DefaultComponent>
                 <h3>React Hook Form Version 7</h3>
-                <div>
+                <DefaultFormComponent>
                     <form onSubmit={handleSubmit(onSubmit, (errors) => console.error(errors))}>
                         <div style={{
                             // border: "1px solid black",
@@ -108,10 +97,9 @@ export function UseForm() {
                                 </GreyButton>
                             </div>
                         </div>
-
                     </form>
-                </div>
-            </div>
+                </DefaultFormComponent>
+            </DefaultComponent>
         </>
     )
 }

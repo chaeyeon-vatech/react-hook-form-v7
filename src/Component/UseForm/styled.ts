@@ -16,39 +16,6 @@ export const RenderCountContainer = styled("div", {
         fontColor: "#333333"
     };
 });
-// export const NavigateContainer = styled("div", {
-//     label: "NavigateContainer"
-// })<{}>(() => {
-//     return {
-//         alignItems: "flex-end",
-//         bottom: 0,
-//         display: "flex",
-//         fontSize: 14,
-//         justifyContent: "flex-end",
-//         left: 0,
-//         padding: "12px 20px 12px 80px",
-//         position: "absolute",
-//         right: 0,
-//         top: 0,
-//
-//     };
-// });
-//
-//
-// export const NavigateLink = styled("a", {
-//     label: "NavigateLink"
-// })<{}>(() => {
-//     return {
-//         float: "left",
-//         color: "#f2f2f2",
-//         textAlign: "center",
-//         padding: "14px 16px",
-//         textDecoration: "none",
-//         fontSize: 17
-//
-//     };
-// });
-
 
 export const ErrorComponent = styled("div", {
     label: "ErrorComponent"
@@ -58,7 +25,6 @@ export const ErrorComponent = styled("div", {
         color: "red"
     };
 });
-
 
 export const CustomInput = styled("input", {
     label: "CustomInput"
@@ -96,7 +62,6 @@ export const TooltipText = styled("span", {
     };
 });
 
-
 export const GreyButton = styled("button", {
     label: "GreyButton"
 })<{}>(() => {
@@ -109,15 +74,6 @@ export const GreyButton = styled("button", {
         marginRight: 20
     };
 });
-
-// padding: 5px;
-// background: #516391;
-// color: white;
-// letter-spacing: 0px;
-// text-transform: none;
-// padding: 10px;
-// letter-spacing: 2px;
-
 
 export const FormComponent = styled("div", {
     label: "FormComponent"

@@ -1,8 +1,6 @@
 import * as React from "react";
 import {useForm, useFieldArray} from "react-hook-form";
-import {DefaultComponent, DefaultFormComponent} from "../../styled";
-import {SubmitButton} from "../UseFormContext/styled";
-import {CustomInput} from "./styled";
+import {DefaultComponent, DefaultFormComponent, CustomInput, SubmitButton} from "../../styled";
 
 type FormValues = {
     firstName: string;
@@ -45,7 +43,7 @@ export default function UseFieldArray() {
                         type="button"
                         onClick={() =>
                             append({
-                                name: "bill"
+                                name: "박"
                             })
                         }
                     >
