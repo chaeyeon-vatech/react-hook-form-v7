@@ -8,10 +8,9 @@ const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
-    <React.StrictMode>
-        {/*<link href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />*/}
-        <App/>
-    </React.StrictMode>
+    // <React.StrictMode>
+    <App/>
+    // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

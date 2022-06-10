@@ -11,7 +11,7 @@ export function UseFormContext() {
     return (
         <DefaultComponent>
             <h2>UseFormContext</h2>
-            {/*여러 컴포넌트에 props 넘겨주지 않아도 값 공유 가능*/}
+            {/*여러 컴포넌트에 props 넘겨주지 않아도 컴포넌트 안에서 전역적으로 데이터 값 공유 가능*/}
             {/*FormProvider 를 이용해서 모든 useForm return 값을 넘긴다.*/}
             <FormProvider {...methods}>
                 <form onSubmit={handleSubmit((data) => alert(JSON.stringify(data, null, 4)))}>

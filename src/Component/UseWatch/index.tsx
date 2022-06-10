@@ -10,9 +10,11 @@ interface FormInputs {
 
 function FirstNameWatched({control}: { control: Control<FormInputs> }) {
     const firstName = useWatch({
+        //Controlled 상태의 제어된 구성 요소를 격리하여 해당 범위 내에서 다시 렌더링하고 앱/Form 수준에 대한 성능 영향을 줄임
+        //Register의  controlled component 버전
         control,
-        name: "firstName", // without supply name will watch the entire form, or ['firstName', 'lastName'] to watch both
-        defaultValue: "default" // default value before the render
+        name: "firstName", // Name이 없으면  모든 field watch ['firstName', 'lastName']
+        defaultValue: "default" // render 전 watch의 default value
     });
 
     return <p>Watch: {firstName}</p>; // only re-render at the component level, when firstName changes
@@ -24,7 +26,6 @@ export default function UseWatch() {
     const onSubmit = (data: FormInputs) => {
         alert(JSON.stringify(data));
     };
-
     return (
         <DefaultComponent>
             <h2>UseWatch</h2>

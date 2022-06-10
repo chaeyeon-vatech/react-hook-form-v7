@@ -20,24 +20,9 @@ export function UseForm() {
             .required('Register Sample is required'),
         watchSample: Yup.string()
             .required('Watch Sample is required'),
-        // title: Yup.string()
-        //     .required('Title is required'),
-        // dob: Yup.string()
-        //     .required('Date of Birth is required')
         //     .matches(/^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/, 'Date of Birth must be a valid date in the format YYYY-MM-DD'),
-        // email: Yup.string()
-        //     .required('Email is required')
         //     .email('Email is invalid'),
-        // password: Yup.string()
-        //     .min(6, 'Password must be at least 6 characters')
-        //     .required('Password is required'),
-        // confirmPassword: Yup.string()
-        //     .oneOf([Yup.ref('password'), null], 'Passwords must match')
-        //     .required('Confirm Password is required'),
-        // acceptTerms: Yup.bool()
-        //     .oneOf([true], 'Accept Ts & Cs is required')
     });
-    const formOptions = {resolver: yupResolver(validationSchema), defaultValue: {registerSample: ''}};
 
     // useForm의 return 값인 methods로 form 데이터를 관리할 수 있다.
     const {
@@ -48,28 +33,27 @@ export function UseForm() {
         reset,
         formState,
         setValue
-    } = useForm(formOptions);
+    } = useForm({resolver: yupResolver(validationSchema)});
 
     // formState
-    const {isDirty, dirtyFields, touchedFields, errors} = formState;
+    // const {isDirty, dirtyFields, touchedFields, errors} = formState;
+    const {errors} = formState;
+
+    console.log("Uncontrolled :", getValues("registerSample"))
+    console.log("Controlled :", getValues("watchSample"))
 
     function onSubmit(data: any) {
-        // display form data on success
         alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4));
         return false;
-    }
-
-    function getKeyByValue(object: any) {
-        return Object.keys(object).filter((key: string) => object[key] === true);
     }
 
     return (<>
             <div style={{margin: 20}}>
                 <h2>UseForm</h2>
                 <h3>FormState 안 Return </h3>
-                <h3>📝 [isDirty] 수정한 기록? : {isDirty ? "Yes" : "No"}</h3>
-                <h3>📝 [dirtyFields] 수정된 기록이 있는 Fields? : {getKeyByValue(dirtyFields).join(", ")}</h3>
-                <h3>📝 [touchedFields]User InterAction이 있는 Fields? : {getKeyByValue(touchedFields).join(", ")}</h3>
+                {/*<h3>📝 [isDirty] 수정한 기록? : {isDirty ? "Yes" : "No"}</h3>*/}
+                {/*<h3>📝 [dirtyFields] 수정된 기록이 있는 Fields? : {getKeyByValue(dirtyFields).join(", ")}</h3>*/}
+                {/*<h3>📝 [touchedFields]User InterAction이 있는 Fields? : {getKeyByValue(touchedFields).join(", ")}</h3>*/}
             </div>
             <div style={{
                 boxSizing: "border-box",
@@ -81,8 +65,7 @@ export function UseForm() {
             }}>
                 <h3>React Hook Form Version 7</h3>
                 <div>
-                    {/* handleSubmit : Form Validation 검사가 성공하면 Form Data를 수신*/}
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form onSubmit={handleSubmit(onSubmit, (errors) => console.error(errors))}>
                         <div style={{
                             // border: "1px solid black",
                             borderRadius: 50,
@@ -91,9 +74,9 @@ export function UseForm() {
                         }}>
                             <div>
 
-                                <label>1. Register / getValues : 입력 또는 선택 요소를 등록하고 유효성 검사 규칙을 React-hook-form에 적용
-                                    가능</label>
+                                <label>1. Register / getValues : UNCONTROLLED</label>
                                 {/* 1. Register 방법 : function 자체에서 value name 호출*/}
+                                {/*onChange나 value 같은 상태 값을 prop 으로 넘겨줄 필요 X*/}
                                 <CustomInput {...register('registerSample')}/>
 
                                 <ErrorComponent>{errors.registerSample?.message}</ErrorComponent>
@@ -101,11 +84,12 @@ export function UseForm() {
                                 <GreyButton onClick={() => setValue('registerSample', 'Value')}>Set Value to
                                     "Value"</GreyButton>
 
+                                {/* GetValues rendering 시 값 업데이트*/}
                                 <h4>Get Register Value : {getValues('registerSample')}</h4>
                             </div>
                             <div>
 
-                                <label>2. Watch : 지정된 Input Field 감시 및 해당 값 반환</label>
+                                <label>2. Watch : CONTROLLED</label>
                                 <CustomInput type="text" {...register('watchSample')}
                                 />
                                 <ErrorComponent>{errors.watchSample?.message}</ErrorComponent>
@@ -113,9 +97,6 @@ export function UseForm() {
                                 <h4>Get Watch Value : {watch('watchSample')}</h4>
                             </div>
                             <div>
-
-                                <ErrorComponent>{errors.watchSample?.message}</ErrorComponent>
-
                             </div>
                             <div>
                                 <GreyButton type="submit">Register</GreyButton>
