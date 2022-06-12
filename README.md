@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# 📁 react-hook-form-v7
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. [ Description ](#desc)
+2. [ 실습 ](#usage)
+3. [ 사용 기술 및 기술 스택 ](#tech)
 
-## Available Scripts
 
-In the project directory, you can run:
+<a name="desc"></a>
+## 1. Description
+사내에서 진행한 react-hook-form 세미나 관련 자료
 
-### `npm start`
+### 1.1 세미나 PDF 자료
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Form Validation Seminar PDF 자료 Link](https://github.com/chaeyeon-vatech/react-hook-form-v7/blob/main/public/Seminar%20%EC%9E%90%EB%A3%8C/Form_Validation__PPT.pdf)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+<a name="usage"></a>
+## 2. 실습
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2.1 실행 방법
 
-### `npm run build`
+```
+yarn install
+yarn start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2.2 Overview
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="1782" alt="React-hook-form 스크린샷" src="https://user-images.githubusercontent.com/75648425/173214896-ef481196-2a0a-4486-bae4-cc912c19e921.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2.3 Content
 
-### `npm run eject`
+```
+1. useForm
+2. useFormContext
+3. useWatch
+4. useFieldArray
+5. useController
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 2.4 번외
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Formik vs react-hook-form 비교 Link](https://github.com/chaeyeon-vatech/formik-vs-react-hook-form.git)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<a name="tech"></a>
+## 3. 사용언어, 기술스택
 
-## Learn More
+ ![Generic badge](https://img.shields.io/badge/framework-react-blue.svg) ![Generic badge](https://img.shields.io/badge/library-react_hook_form-pink.svg)
+![Generic badge](https://img.shields.io/badge/library-yup-yellow.svg)  ![Generic badge](https://img.shields.io/badge/language-Typescript-important.svg)
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
