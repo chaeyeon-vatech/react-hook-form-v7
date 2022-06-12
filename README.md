@@ -3,6 +3,7 @@
 1. [ Description ](#desc)
 2. [ 실습 ](#usage)
 3. [ 사용 기술 및 기술 스택 ](#tech)
+4. [ Feedback 및 수정 사항 ](#review)
 
 
 <a name="desc"></a>
@@ -46,7 +47,14 @@ yarn start
 <a name="tech"></a>
 ## 3. 사용언어, 기술스택
 
- ![Generic badge](https://img.shields.io/badge/framework-react-blue.svg) ![Generic badge](https://img.shields.io/badge/library-react_hook_form-pink.svg)
-![Generic badge](https://img.shields.io/badge/library-yup-yellow.svg)  ![Generic badge](https://img.shields.io/badge/language-Typescript-important.svg)
+ ![license](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge) ![React](https://img.shields.io/badge/react-%2361DAFB.svg?style=for-the-badge&logo=react&logoColor=black) ![Typescript](https://img.shields.io/badge/typescript-%233178C6.svg?style=for-the-badge&logo=typescript&logoColor=black) ![Generic badge](https://img.shields.io/badge/library-react_hook_form-pink.svg)
+
 <br>
 
+<a name="review"></a>
+## 4. Feedback 및 수정 사항
+
+
+- [ ] Controlled vs Uncontrolled description simplify (rendering O/X)
+- [ ] Yup 을 사용하지 않고도 쉽게 validation 가능 (향후 직접 개발해보고 commit)
+- [ ] 실습 과제 제출
