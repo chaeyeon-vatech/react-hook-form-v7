@@ -41,7 +41,7 @@ yarn start
 
 ### 2.4 번외
 
-[Formik vs react-hook-form 비교 Link](https://github.com/chaeyeon-vatech/formik-vs-react-hook-form.git)
+[Formik vs react-hook-form 비교 REPO Link](https://github.com/chaeyeon-vatech/formik-vs-react-hook-form.git)
 
 
 <a name="tech"></a>
