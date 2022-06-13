@@ -57,4 +57,4 @@ yarn start
 
 - [ ] Controlled vs Uncontrolled description simplify (rendering O/X)
 - [ ] Yup 을 사용하지 않고도 쉽게 validation 가능 (향후 직접 개발해보고 commit)
-- [ ] 실습 과제 제출
+- [x] 실습 과제 제출 = https://github.com/chaeyeon-vatech/skillup_day
